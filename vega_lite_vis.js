@@ -93,7 +93,7 @@ vegaEmbed("#healthAndHappy", vg_9, { actions: false })
   .catch(console.error);
 
 // Social support V/s Happiness
-var vg_10 = "correlation_SupportAndHappiness.vg.json";
+var vg_10 = "correlation_supportAndHappiness.vg.json";
 vegaEmbed("#supportAndHappy", vg_10, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -109,7 +109,7 @@ vegaEmbed("#FreedomAndHappy", vg_11, { actions: false })
   .catch(console.error);
 
 // Money V/s Happiness
-var vg_12 = "correlation_MoneyAndHappiness.vg.json";
+var vg_12 = "correlation_moneyAndHappiness.vg.json";
 vegaEmbed("#MoneyAndHappy", vg_12, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
