@@ -1,0 +1,94 @@
+#cover {
+  height: 400px;
+}
+.white_space {
+  margin-top: 7%;
+}
+
+.param_space {
+  margin-bottom: 15px;
+}
+.corrImg:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.corrImg {
+  border-radius: 50%;
+}
+
+#money_health_img {
+  width: 95%;
+}
+
+#money_health_question {
+  text-decoration: underline;
+}
+
+#money_health_question:hover {
+  cursor: pointer;
+  color: rgb(6, 69, 173);
+}
+
+#avgHappy {
+  margin-top: 7%;
+}
+
+#lifeExpec {
+  margin-top: 7%;
+}
+
+#happy_health,
+#happy_support,
+#happy_free {
+  margin-top: 15%;
+}
+
+#kim {
+  color: rgb(95, 94, 94);
+}
+
+#NorthAmerica {
+  color: #e31a1c;
+}
+
+#WestEu {
+  color: #6a3d9a;
+}
+
+#SubAfr {
+  color: #ad83c2;
+}
+
+#SouthAsia {
+  color: #d19e5c;
+}
+
+.emoji {
+  font-size: 35px;
+}
+
+.happyColour {
+  color: rgb(214, 214, 9);
+}
+
+.sadColour {
+  color: rgb(116, 3, 3);
+}
+
+.textBackground {
+  /* background-color: rgb(248, 248, 248); */
+  background-color: #fcf9f9;
+}
+
+#Fin {
+  color: #0d4680;
+}
+
+#Afg {
+  color: #b2182b;
+}
+
+.footer_txt {
+  font-size: 18px;
+}
