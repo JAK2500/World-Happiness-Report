@@ -1,0 +1,114 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/JAK2500/World-Happiness-Report/main/world-happiness-report-2021.csv"
+  },
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "legend": { "disable": true }
+  },
+  "height": { "step": 30 },
+  "encoding": {
+    "x": {
+      "aggregate": "average",
+      "field": "Ladder score",
+      "type": "quantitative",
+      "title": "Average Ladder Score",
+      "axis": null
+    },
+    "y": {
+      "field": "Regional indicator",
+      "type": "nominal",
+      "sort": {
+        "field": "Ladder score",
+        "op": "average",
+        "order": "descending"
+      },
+      "axis": null,
+      "title": "Region"
+    },
+    "color": {
+      "field": "Regional indicator",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Central and Eastern Europe",
+          "Commonwealth of Independent States",
+          "East Asia",
+          "Latin America and Caribbean",
+          "Middle East and North Africa",
+          "North America and ANZ",
+          "South Asia",
+          "Southeast Asia",
+          "Sub-Saharan Africa",
+          "Western Europe"
+        ],
+        "range": [
+          "#00aaff",
+          "#1f78b4",
+          "#83c049",
+          "#33a02c",
+          "#b16e6d",
+          "#e31a1c",
+          "#d19e5c",
+          "#ff7f00",
+          "#ad83c2",
+          "#6a3d9a"
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 40,
+        "height": { "band": 0.5 },
+        "opacity": 0.8
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 45,
+        "size": 15,
+        "fontWeight": "bolder",
+        "opacity": 1
+      },
+      "encoding": {
+        "text": {
+          "field": "Regional indicator",
+          "type": "nominal"
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "size": 17,
+        "fontWeight": "bolder",
+        "opacity": 1
+      },
+      "encoding": {
+        "text": {
+          "field": "Ladder score",
+          "aggregate": "mean",
+          "type": "quantitative",
+          "format": ".2f"
+        }
+      }
+    }
+  ]
+}
