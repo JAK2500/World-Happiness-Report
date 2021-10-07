@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "legend": { "labelFontSize": 12, "labelLimit": 300 }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/JAK2500/World-Happiness-Report/main/avgGdp.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 20,
+        "stroke": "#fff",
+        "strokeWidth": 4
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "region",
+            "type": "nominal",
+            "title": "Region"
+          },
+          {
+            "field": "avgGDP",
+            "type": "quantitative",
+            "aggregate": "average",
+            "title": "Average GDP Per Capita"
+          }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "radiusOffset": 25, "size": 13 },
+      "encoding": {
+        "text": { "field": "avgGDP", "type": "quantitative" }
+      }
+    }
+  ],
+  "encoding": {
+    "theta": { "field": "avgGDP", "type": "quantitative", "stack": true },
+    "radius": {
+      "field": "avgGDP",
+      "type": "quantitative",
+      "scale": { "type": "sqrt", "zero": true, "rangeMin": 260 },
+      "sort": "descending"
+    },
+    "color": {
+      "field": "region",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Central and Eastern Europe",
+          "Commonwealth of Independent States",
+          "East Asia",
+          "Latin America and Caribbean",
+          "Middle East and North Africa",
+          "North America and ANZ",
+          "South Asia",
+          "Southeast Asia",
+          "Sub-Saharan Africa",
+          "Western Europe"
+        ],
+        "range": [
+          "#00aaff",
+          "#1f78b4",
+          "#83c049",
+          "#33a02c",
+          "#b16e6d",
+          "#e31a1c",
+          "#d19e5c",
+          "#ff7f00",
+          "#ad83c2",
+          "#6a3d9a"
+        ]
+      },
+      "legend": { "title": "Region", "titleFontSize": 14 }
+    }
+  }
+}
