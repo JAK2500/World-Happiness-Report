@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/JAK2500/World-Happiness-Report/main/world-happiness-report-2021.csv"
+  },
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#14c4bb",
+        "size": 90
+      },
+      "encoding": {
+        "x": {
+          "field": "Ladder score",
+          "type": "quantitative",
+          "title": "Ladder Score",
+          "axis": {
+            "tickCount": 4,
+            "grid": false,
+            "labelFontSize": 14
+          }
+        },
+        "y": {
+          "field": "Logged GDP per capita",
+          "type": "quantitative",
+          "title": "Logged GDP per capita",
+          "axis": {
+            "tickCount": 8,
+            "grid": false,
+            "labelFontSize": 14
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Ladder score",
+            "type": "quantitative",
+            "title": "Ladder Score",
+            "format": ".2f"
+          },
+          {
+            "field": "Logged GDP per capita",
+            "type": "quantitative",
+            "title": "Logged GDP Per Capita",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "line", "color": "firebrick" },
+      "transform": [
+        {
+          "regression": "Logged GDP per capita",
+          "on": "Ladder score"
+        }
+      ],
+      "encoding": {
+        "x": { "field": "Ladder score", "type": "quantitative" },
+        "y": {
+          "field": "Logged GDP per capita",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "Logged GDP per capita",
+          "on": "Ladder score",
+          "params": true
+        },
+        {
+          "calculate": "'r: '+format(sqrt(datum.rSquared), '.2f')",
+          "as": "corr"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -5,
+        "size": 12
+      },
+      "encoding": { "text": { "type": "nominal", "field": "corr" } }
+    }
+  ]
+}
