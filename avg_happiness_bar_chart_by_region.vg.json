@@ -18,7 +18,6 @@
       "aggregate": "average",
       "field": "Ladder score",
       "type": "quantitative",
-      "title": "Average Ladder Score",
       "axis": null
     },
     "y": {
@@ -90,7 +89,6 @@
         }
       }
     },
-
     {
       "mark": {
         "type": "text",
