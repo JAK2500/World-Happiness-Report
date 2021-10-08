@@ -45,11 +45,11 @@
       <!-- Trend of happiness by region 2006-2020 -->
       <div class="my-5">
         <h1 class="h1 text-center">
-          Average Trend of Ladder Score by Region from 2006 to 2020
+          Average Trend of Happiness by Region from 2006 to 2020
         </h1>
         <div class="my-4"></div>
         <div class="my-2 fs-5">
-          <div class="textBackground">
+          <div class="textBackground text-center">
             Throughout the years,
             <span class="fw-bold fs-4" id="NorthAmerica"
               >North America & ANZ(Australia and New Zealand)</span
@@ -83,7 +83,7 @@
       <!-- Trend of happiness & life span 2006-2020 -->
       <div class="my-4">
         <h1 class="h1 text-center">
-          Trend of Life Expectancy & Ladder Score by Country from 2006 to 2020
+          Trend of Life Expectancy & Happiness by Country from 2006 to 2020
         </h1>
         <div class="param_space"></div>
         <div>
@@ -220,7 +220,7 @@
 
       <!-- Happiness by country 2021 -->
       <div class="row my-5" id="happinessByCountry2021">
-        <h1 class="h1 text-center">Average Ladder Score by Country in 2021</h1>
+        <h1 class="h1 text-center">Average Happiness by Country in 2021</h1>
 
         <p class="param_space"></p>
 
@@ -229,7 +229,7 @@
             <span class="fs-3 fw-bold" id="Fin">Finland</span> was the country
             with the
             <span class="happyColour fs-4 fst-italic fw-bold">
-              highest ladder score
+              highest happiness score
             </span>
             <span class="happyColour fs-2 fw-bold fst-italic">(7.84)</span>
             <span class="emoji">&#128522;</span>
@@ -239,7 +239,7 @@
             <span class="fs-3 fw-bold" id="Afg">Afghanistan</span> was the
             country with the
             <span class="sadColour fs-4 fst-italic fw-bold"
-              >lowest ladder score</span
+              >lowest happiness score</span
             >
             <span class="sadColour fs-2 fw-bold fst-italic">(2.52)</span>
             <span class="emoji">&#128546;</span>
@@ -257,18 +257,10 @@
 
       <!-- Top & Bottom 25 countries for happiness in 2021 -->
       <div class="row my-4" id="top_bottom_k2021">
-        <div class="col">
-          <h1 class="h1 text-center">
-            Top K Countries With Happiest Residents
-          </h1>
-          <div id="most_happy"></div>
-        </div>
-
-        <div class="col">
-          <h1 class="h1 text-center">
-            Bottom K Countries With Least Happiest Residents
-          </h1>
-          <div id="least_happy"></div>
+        <div>
+          <h1 class="h1 text-center">Top & Bottom K Countries in Happiness</h1>
+          <p class="param_space"></p>
+          <div id="most_and_least_happy"></div>
         </div>
       </div>
 
@@ -518,9 +510,6 @@
           </h2>
           <div class="row" id="HealthAndMoney">
             <div class="col my-3">
-              <div id="healthAndMoney"></div>
-            </div>
-            <div class="col my-3">
               <!-- Picture for money & health  -->
               <img
                 src="correlation images/money_health.jpg"
@@ -531,7 +520,7 @@
               <br />
               <br />
 
-              <div class="col my-3 fs-5">
+              <div class="my-3 fs-5">
                 <div class="textBackground">
                   The correlation between Life Expectancy & Money is
                   <span class="fw-bolder fs-4 text-primary">
@@ -542,6 +531,9 @@
                   Hence showing that money does indeed prolong our life
                 </div>
               </div>
+            </div>
+            <div class="col my-3">
+              <div id="healthAndMoney"></div>
             </div>
           </div>
         </div>
