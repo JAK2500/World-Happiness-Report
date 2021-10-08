@@ -61,20 +61,10 @@ vegaEmbed("#life_map", vg_6, { actions: false })
   .catch(console.error);
 
 /**
- * Top K Countries Where Residents are the happiest in 2021
+ * Top & Bottom K Countries in happiness score in 2021
  */
-var vg_7 = "most_happy.vg.json";
-vegaEmbed("#most_happy", vg_7, { actions: false })
-  .then(function (result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  })
-  .catch(console.error);
-
-/**
- * Bottom K Countries Where Residents are least happiest in 2021
- */
-var vg_8 = "least_happy.vg.json";
-vegaEmbed("#least_happy", vg_8, { actions: false })
+var vg_7 = "Top_Bottom_K_Happiest_Countries.vg.json";
+vegaEmbed("#most_and_least_happy", vg_7, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   })
@@ -85,40 +75,40 @@ vegaEmbed("#least_happy", vg_8, { actions: false })
  */
 
 // Happiness V/s Health
-var vg_9 = "correlation_HealthAndHappiness.vg.json";
-vegaEmbed("#healthAndHappy", vg_9, { actions: false })
+var vg_8 = "correlation_HealthAndHappiness.vg.json";
+vegaEmbed("#healthAndHappy", vg_8, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   })
   .catch(console.error);
 
 // Social support V/s Happiness
-var vg_10 = "correlation_supportAndHappiness.vg.json";
-vegaEmbed("#supportAndHappy", vg_10, { actions: false })
+var vg_9 = "correlation_supportAndHappiness.vg.json";
+vegaEmbed("#supportAndHappy", vg_9, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   })
   .catch(console.error);
 
 // Freedom V/s Happiness
-var vg_11 = "correlation_FreedomAndHappiness.vg.json";
-vegaEmbed("#FreedomAndHappy", vg_11, { actions: false })
+var vg_10 = "correlation_FreedomAndHappiness.vg.json";
+vegaEmbed("#FreedomAndHappy", vg_10, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   })
   .catch(console.error);
 
 // Money V/s Happiness
-var vg_12 = "correlation_moneyAndHappiness.vg.json";
-vegaEmbed("#MoneyAndHappy", vg_12, { actions: false })
+var vg_11 = "correlation_moneyAndHappiness.vg.json";
+vegaEmbed("#MoneyAndHappy", vg_11, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   })
   .catch(console.error);
 
 // Money V/s Health
-var vg_13 = "correlation_MoneyAndHealth.vg.json";
-vegaEmbed("#healthAndMoney", vg_13, { actions: false })
+var vg_12 = "correlation_MoneyAndHealth.vg.json";
+vegaEmbed("#healthAndMoney", vg_12, { actions: false })
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   })
