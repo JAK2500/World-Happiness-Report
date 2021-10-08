@@ -1,0 +1,257 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/JAK2500/World-Happiness-Report/main/world-happiness-report-2021.csv"
+  },
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "legend": { "labelFontSize": 12, "padding": 10, "labelLimit": 200 }
+  },
+  "params": [
+    {
+      "name": "num_select",
+      "value": 10,
+      "bind": {
+        "input": "range",
+        "min": 10,
+        "max": 25,
+        "step": 1,
+        "name": "Number of Countries: "
+      }
+    },
+    {
+      "name": "highlight",
+      "select": { "type": "point", "on": "mouseover" }
+    }
+  ],
+  "hconcat": [
+    {
+      "width": 375,
+      "height": 600,
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "rank"
+            }
+          ],
+          "sort": [{ "field": "Ladder score", "order": "descending" }]
+        },
+        {
+          "filter": "datum.rank <= num_select"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 10,
+        "height": { "band": 0.6 },
+        "opacity": 0.8,
+        "stroke": "blueviolet"
+      },
+      "encoding": {
+        "x": {
+          "field": "Ladder score",
+          "type": "quantitative",
+          "axis": {
+            "tickCount": 8,
+            "labelFontSize": 14,
+            "grid": false,
+            "titleFontSize": 15
+          },
+          "title": "Happiness Score"
+        },
+        "y": {
+          "field": "Country name",
+          "type": "nominal",
+          "sort": {
+            "field": "Ladder score",
+            "op": "average",
+            "order": "descending"
+          },
+          "title": null,
+          "axis": {
+            "labelLimit": 0,
+            "labelAngle": -49,
+            "grid": false,
+            "labelFontSize": 11
+          }
+        },
+        "color": {
+          "field": "Regional indicator",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Central and Eastern Europe",
+              "Commonwealth of Independent States",
+              "East Asia",
+              "Latin America and Caribbean",
+              "Middle East and North Africa",
+              "North America and ANZ",
+              "South Asia",
+              "Southeast Asia",
+              "Sub-Saharan Africa",
+              "Western Europe"
+            ],
+            "range": [
+              "#00aaff",
+              "#1f78b4",
+              "#83c049",
+              "#33a02c",
+              "#b16e6d",
+              "#e31a1c",
+              "#d19e5c",
+              "#ff7f00",
+              "#ad83c2",
+              "#6a3d9a"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Country name",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "Ladder score",
+            "type": "quantitative",
+            "title": "Happiness score",
+            "format": ".2f"
+          }
+        ],
+        "opacity": {
+          "condition": { "param": "highlight", "value": 1 },
+          "value": 0.5
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "param": "highlight",
+              "empty": false,
+              "value": 1
+            }
+          ],
+          "value": 0
+        }
+      }
+    },
+    {
+      "width": 375,
+      "height": 600,
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "rank"
+            }
+          ],
+          "sort": [{ "field": "Ladder score", "order": "ascending" }]
+        },
+        {
+          "filter": "datum.rank <= num_select"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 10,
+        "height": { "band": 0.6 },
+        "opacity": 0.8,
+        "stroke": "blueviolet"
+      },
+      "encoding": {
+        "x": {
+          "field": "Ladder score",
+          "type": "quantitative",
+          "axis": {
+            "tickCount": 8,
+            "grid": false,
+            "labelFontSize": 14,
+            "titleFontSize": 15
+          },
+          "scale": { "domain": [0, 8] },
+          "title": "Happiness Score"
+        },
+        "y": {
+          "field": "Country name",
+          "type": "nominal",
+          "sort": {
+            "field": "Ladder score",
+            "op": "average",
+            "order": "ascending"
+          },
+          "title": null,
+          "axis": {
+            "labelLimit": 0,
+            "labelAngle": -49,
+            "grid": false,
+            "labelFontSize": 11
+          }
+        },
+        "color": {
+          "field": "Regional indicator",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Central and Eastern Europe",
+              "Commonwealth of Independent States",
+              "East Asia",
+              "Latin America and Caribbean",
+              "Middle East and North Africa",
+              "North America and ANZ",
+              "South Asia",
+              "Southeast Asia",
+              "Sub-Saharan Africa",
+              "Western Europe"
+            ],
+            "range": [
+              "#00aaff",
+              "#1f78b4",
+              "#83c049",
+              "#33a02c",
+              "#b16e6d",
+              "#e31a1c",
+              "#d19e5c",
+              "#ff7f00",
+              "#ad83c2",
+              "#6a3d9a"
+            ]
+          },
+          "legend": { "title": "Region", "titleFontSize": 14 }
+        },
+        "tooltip": [
+          {
+            "field": "Country name",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "Ladder score",
+            "type": "quantitative",
+            "title": "Happiness Score",
+            "format": ".2f"
+          }
+        ],
+        "opacity": {
+          "condition": { "param": "highlight", "value": 1 },
+          "value": 0.5
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "param": "highlight",
+              "empty": false,
+              "value": 1
+            }
+          ],
+          "value": 0
+        }
+      }
+    }
+  ]
+}
