@@ -24,27 +24,29 @@
         "x": {
           "field": "Ladder score",
           "type": "quantitative",
-          "title": "Ladder Score",
+          "title": "Happiness Score",
           "axis": {
             "tickCount": 4,
             "grid": false,
-            "labelFontSize": 14
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "y": {
           "field": "Freedom to make life choices",
           "type": "quantitative",
-          "title": "Freedom to make life choices",
+          "title": "Freedom",
           "axis": {
             "grid": false,
-            "labelFontSize": 14
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "tooltip": [
           {
             "field": "Ladder score",
             "type": "quantitative",
-            "title": "Ladder Score",
+            "title": "Happiness Score",
             "format": ".2f"
           },
           {
