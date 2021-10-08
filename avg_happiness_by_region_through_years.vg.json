@@ -63,7 +63,7 @@
     "x": {
       "field": "year",
       "type": "temporal",
-      "axis": { "grid": false, "labelFontSize": 14 },
+      "axis": { "grid": false, "labelFontSize": 14, "titleFontSize": 15 },
       "title": "Year"
     },
 
@@ -71,9 +71,9 @@
       "aggregate": "mean",
       "field": "Life Ladder",
       "type": "quantitative",
-      "axis": { "grid": false, "labelFontSize": 14 },
+      "axis": { "grid": false, "labelFontSize": 14, "titleFontSize": 15 },
       "scale": { "domain": [2, 8] },
-      "title": "Average Ladder Score"
+      "title": "Average Happiness Score"
     },
     "color": {
       "field": "Regional indicator",
@@ -121,7 +121,7 @@
         "aggregate": "mean",
         "type": "quantitative",
         "format": ".2f",
-        "title": "Average Ladder Score"
+        "title": "Average Happiness Score"
       },
       { "field": "year", "type": "temporal", "format": "%Y", "title": "Year" }
     ]
