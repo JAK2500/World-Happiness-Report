@@ -9,11 +9,18 @@
     },
     "legend": { "labelFontSize": 12, "labelLimit": 300 }
   },
+
   "data": {
     "url": "https://raw.githubusercontent.com/JAK2500/World-Happiness-Report/main/avgGdp.csv"
   },
   "layer": [
     {
+      "params": [
+        {
+          "name": "highlight",
+          "select": { "type": "point", "on": "mouseover" }
+        }
+      ],
       "mark": {
         "type": "arc",
         "innerRadius": 20,
@@ -22,6 +29,10 @@
       },
 
       "encoding": {
+        "opacity": {
+          "condition": { "param": "highlight", "value": 1 },
+          "value": 0.5
+        },
         "tooltip": [
           {
             "field": "region",
@@ -52,6 +63,7 @@
       "scale": { "type": "sqrt", "zero": true, "rangeMin": 260 },
       "sort": "descending"
     },
+
     "color": {
       "field": "region",
       "type": "nominal",
