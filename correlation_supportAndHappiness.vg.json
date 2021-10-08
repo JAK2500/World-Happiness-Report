@@ -24,11 +24,12 @@
         "x": {
           "field": "Ladder score",
           "type": "quantitative",
-          "title": "Ladder Score",
+          "title": "Happiness Score",
           "axis": {
             "tickCount": 4,
             "grid": false,
-            "labelFontSize": 14
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "y": {
@@ -37,14 +38,15 @@
           "title": "Social support",
           "axis": {
             "grid": false,
-            "labelFontSize": 14
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "tooltip": [
           {
             "field": "Ladder score",
             "type": "quantitative",
-            "title": "Ladder Score",
+            "title": "Happiness Score",
             "format": ".2f"
           },
           {
