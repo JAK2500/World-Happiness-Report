@@ -28,7 +28,8 @@
           "axis": {
             "tickCount": 4,
             "grid": false,
-            "labelFontSize": 14
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "y": {
@@ -38,7 +39,8 @@
           "axis": {
             "tickCount": 8,
             "grid": false,
-            "labelFontSize": 14
+            "labelFontSize": 14,
+            "titleFontSize": 15
           }
         },
         "tooltip": [
