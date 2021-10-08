@@ -56,7 +56,10 @@
               "#2166ac"
             ]
           },
-          "legend": { "title": "Ladder Score", "titleFontSize": 14 }
+          "legend": {
+            "title": "Happiness Score",
+            "titleFontSize": 14
+          }
         },
         "strokeWidth": {
           "condition": [
@@ -79,7 +82,7 @@
             "field": "Ladder score",
             "type": "quantitative",
             "format": ".2f",
-            "title": "Ladder Score"
+            "title": "Happiness Score"
           }
         ]
       }
