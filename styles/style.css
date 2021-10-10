@@ -96,3 +96,15 @@
 .vega-bind-name {
   padding-left: 300px;
 }
+
+#lifeColour {
+  color: #dd3497;
+}
+
+.FinHappyColour {
+  color: #2166ac;
+}
+
+.corrColour {
+  color: #14c4bb;
+}
