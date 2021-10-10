@@ -32,6 +32,7 @@
     {
       "width": 375,
       "height": 600,
+      "title": "Top K Countries",
       "transform": [
         {
           "window": [
@@ -143,6 +144,7 @@
     {
       "width": 375,
       "height": 600,
+      "title": "Bottom K Countries",
       "transform": [
         {
           "window": [
