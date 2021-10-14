@@ -86,6 +86,54 @@
           }
         ]
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 95,
+        "dy": -220,
+        "fontSize": 15,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": { "field": "properties.NAME", "type": "nominal" },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['properties.NAME'] == 'Finland'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 225,
+        "dy": -135,
+        "fontSize": 15,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": { "field": "properties.NAME", "type": "nominal" },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['properties.NAME'] == 'Afghanistan'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
     }
   ],
   "config": {
