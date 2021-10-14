@@ -124,3 +124,7 @@ body {
 #avgHappyColour {
   color: #c0800a;
 }
+
+.happyCorr {
+  color: rgb(170, 159, 0);
+}
