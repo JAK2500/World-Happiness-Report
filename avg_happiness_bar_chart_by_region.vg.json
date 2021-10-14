@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
+  "width": 680,
   "data": {
     "url": "https://raw.githubusercontent.com/JAK2500/World-Happiness-Report/main/world-happiness-report-2021.csv"
   },
@@ -10,6 +10,7 @@
         "stroke": "transparent"
       }
     },
+    "background": "#e5d2e7",
     "legend": { "disable": true }
   },
   "height": { "step": 30 },

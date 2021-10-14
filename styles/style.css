@@ -1,3 +1,16 @@
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #bcc222,
+    #e7f00e,
+    #bdc23d,
+    #ff9aa9,
+    #f8afd4,
+    #7ed5e4,
+    #49c7bf
+  );
+}
+
 #cover {
   height: 400px;
 }
@@ -57,11 +70,11 @@
 }
 
 #SubAfr {
-  color: #ad83c2;
+  color: #8a679b;
 }
 
 #SouthAsia {
-  color: #d19e5c;
+  color: #aa7a3a;
 }
 
 .emoji {
@@ -69,28 +82,23 @@
 }
 
 .happyColour {
-  color: rgb(214, 214, 9);
+  color: rgb(194, 194, 6);
 }
 
 .sadColour {
-  color: rgb(116, 3, 3);
+  color: rgb(129, 13, 13);
 }
 
 .textBackground {
-  /* background-color: rgb(248, 248, 248); */
-  background-color: #fcf9f9;
-}
+  background-image: linear-gradient(to right bottom, #e6eb66, #eebbd4, #b7dce2);
 
-#Fin {
-  color: #6a3d9a;
-}
-
-#Afg {
-  color: #d19e5c;
+  color: rgb(70, 67, 67);
 }
 
 .footer_txt {
-  font-size: 18px;
+  font-size: 20px;
+  background-image: linear-gradient(to right bottom, #e7f00e, #f8afd4, #7ed5e4);
+  color: rgb(70, 67, 67);
 }
 
 .vega-bind-name {
@@ -101,8 +109,12 @@
   color: #dd3497;
 }
 
-.FinHappyColour {
-  color: #2166ac;
+.highLifeColour {
+  color: #ae017e;
+}
+
+.lowLifeColour {
+  color: #be7e8e;
 }
 
 .corrColour {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 750,
+  "width": 799,
   "height": 500,
 
   "config": {
@@ -9,7 +9,7 @@
         "stroke": "transparent"
       }
     },
-
+    "background": "#f0d7ea",
     "legend": { "labelFontSize": 12, "padding": 10, "labelLimit": 300 }
   },
 

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": 975,
   "height": 500,
 
   "data": {
@@ -48,12 +48,12 @@
             "type": "threshold",
             "domain": [3, 4, 5, 6, 7],
             "range": [
-              "#b2182b",
-              "#ef8a62",
-              "#fddbc7",
-              "#d1e5f0",
-              "#67a9cf",
-              "#2166ac"
+              "#b50e22",
+              "#d34618",
+              "#ea7300",
+              "#f9a000",
+              "#ffcd00",
+              "#fffb0d"
             ]
           },
           "legend": {
@@ -93,6 +93,7 @@
       "cell": {
         "stroke": "transparent"
       }
-    }
+    },
+    "background": "#ffd8f5"
   }
 }
