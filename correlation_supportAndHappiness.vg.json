@@ -41,7 +41,8 @@
             "grid": false,
             "labelFontSize": 14,
             "titleFontSize": 15
-          }
+          },
+          "scale": { "domain": [0, 1] }
         },
         "tooltip": [
           {
