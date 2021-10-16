@@ -7,8 +7,7 @@
         "stroke": "transparent"
       }
     },
-    "background": "#e5d2e7",
-    "legend": { "labelFontSize": 12, "labelLimit": 300 }
+    "legend": { "labelFontSize": 12, "labelLimit": 300, "padding": -5 }
   },
 
   "data": {
@@ -25,7 +24,7 @@
       "mark": {
         "type": "arc",
         "innerRadius": 20,
-        "stroke": "#e5d2e7",
+        "stroke": "white",
         "strokeWidth": 4
       },
 

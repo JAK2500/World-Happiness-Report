@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": 975,
   "height": 500,
 
   "data": {
@@ -92,7 +92,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": -125,
-        "dy": -160,
+        "dy": -190,
         "fontSize": 15,
         "fontWeight": "bold"
       },
@@ -116,7 +116,7 @@
         "align": "right",
         "baseline": "middle",
         "dx": 295,
-        "dy": -15,
+        "dy": 10,
         "fontSize": 14,
         "fontWeight": "bold"
       },
@@ -127,7 +127,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum['properties.NAME'] == 'Malaysia'",
+            "test": "datum['properties.NAME'] == 'Indonesia'",
             "value": 1
           },
           "value": 0
@@ -139,8 +139,8 @@
         "type": "text",
         "align": "right",
         "baseline": "middle",
-        "dx": 325,
-        "dy": -120,
+        "dx": 395,
+        "dy": -128,
         "fontSize": 14,
         "fontWeight": "bold"
       },
@@ -157,6 +157,78 @@
           "value": 0
         }
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -185,
+        "dy": 128,
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": { "field": "properties.NAME", "type": "nominal" },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['properties.NAME'] == 'Chile'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 35,
+        "dy": 80,
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": { "field": "properties.NAME", "type": "nominal" },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['properties.NAME'] == 'Namibia'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -20,
+        "dy": -145,
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": { "field": "properties.NAME", "type": "nominal" },
+        "color": {
+          "value": "black"
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum['properties.NAME'] == 'Portugal'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
     }
   ],
   "config": {
@@ -165,6 +237,6 @@
         "stroke": "transparent"
       }
     },
-    "background": "#ffd8f5"
+    "background": "#fafdfc"
   }
 }

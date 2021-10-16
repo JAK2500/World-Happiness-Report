@@ -9,16 +9,17 @@
         "stroke": "transparent"
       }
     },
-    "background": "#ffd8f5"
+
+    "background": "#fafdfc"
   },
   "params": [
     {
       "name": "num_select",
-      "value": 10,
+      "value": 15,
       "bind": {
         "input": "range",
-        "min": 10,
-        "max": 25,
+        "min": 5,
+        "max": 15,
         "step": 1,
         "name": "Number of Countries: "
       }
@@ -30,9 +31,9 @@
   ],
   "hconcat": [
     {
-      "width": 485,
+      "width": 475,
       "height": 600,
-      "title": "Top K Countries",
+      "title": "Countries With The Highest Happiness Score",
       "transform": [
         {
           "window": [
@@ -62,7 +63,8 @@
             "tickCount": 8,
             "labelFontSize": 14,
             "grid": false,
-            "titleFontSize": 15
+            "titleFontSize": 15,
+            "labelLimit": 400
           },
           "title": "Happiness Score"
         },
@@ -76,13 +78,18 @@
           },
           "title": null,
           "axis": {
-            "labelLimit": 0,
-            "labelAngle": -49,
+            "labelAngle": -39,
             "grid": false,
             "labelFontSize": 11
           }
         },
-        "color": { "value": "#ffcd00" },
+        "color": {
+          "condition": {
+            "test": "datum['Ladder score'] >= 7",
+            "value": "#7a0177"
+          },
+          "value": "#c51b8a"
+        },
         "tooltip": [
           {
             "field": "Country name",
@@ -94,6 +101,11 @@
             "type": "quantitative",
             "title": "Happiness score",
             "format": ".2f"
+          },
+          {
+            "field": "Regional indicator",
+            "type": "nominal",
+            "title": "Region"
           }
         ],
         "opacity": {
@@ -113,9 +125,9 @@
       }
     },
     {
-      "width": 485,
+      "width": 475,
       "height": 600,
-      "title": "Bottom K Countries",
+      "title": "Countries With The Lowest Happiness Score",
       "transform": [
         {
           "window": [
@@ -160,13 +172,24 @@
           },
           "title": null,
           "axis": {
-            "labelLimit": 0,
-            "labelAngle": -49,
+            "labelAngle": -19,
             "grid": false,
             "labelFontSize": 11
           }
         },
-        "color": { "value": "#ffcd00" },
+        "color": {
+          "condition": [
+            {
+              "test": "datum['Ladder score'] >= 3 && datum['Ladder score'] < 4",
+              "value": "#cc9f9b"
+            },
+            {
+              "test": "datum['Ladder score'] < 3",
+              "value": "#f2c4ae"
+            }
+          ],
+          "value": "#d16d85"
+        },
         "tooltip": [
           {
             "field": "Country name",
@@ -178,6 +201,11 @@
             "type": "quantitative",
             "title": "Happiness Score",
             "format": ".2f"
+          },
+          {
+            "field": "Regional indicator",
+            "type": "nominal",
+            "title": "Region"
           }
         ],
         "opacity": {

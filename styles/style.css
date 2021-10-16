@@ -1,19 +1,8 @@
-body {
-  background-image: linear-gradient(
-    to right bottom,
-    #bcc222,
-    #e7f00e,
-    #bdc23d,
-    #ff9aa9,
-    #f8afd4,
-    #7ed5e4,
-    #49c7bf
-  );
+#WHR_title {
+  font-size: 85px;
+  color: rgb(126, 0, 88);
 }
 
-#cover {
-  height: 400px;
-}
 .white_space {
   margin-top: 7%;
 }
@@ -21,6 +10,7 @@ body {
 .param_space {
   margin-bottom: 15px;
 }
+
 .corrImg:hover {
   cursor: pointer;
   opacity: 0.5;
@@ -43,22 +33,22 @@ body {
   color: rgb(6, 69, 173);
 }
 
-#avgHappy {
+#lifeExpec {
   margin-top: 7%;
 }
 
-#lifeExpec {
-  margin-top: 7%;
+#bar_chart_2021 {
+  padding-left: 20%;
+}
+
+#gdp_text_2021 {
+  padding-left: 15%;
 }
 
 #happy_health,
 #happy_support,
 #happy_free {
   margin-top: 15%;
-}
-
-#kim {
-  color: rgb(95, 94, 94);
 }
 
 #NorthAmerica {
@@ -81,50 +71,16 @@ body {
   font-size: 35px;
 }
 
-.happyColour {
-  color: rgb(194, 194, 6);
-}
-
-.sadColour {
-  color: rgb(129, 13, 13);
-}
-
-.textBackground {
-  background-image: linear-gradient(to right bottom, #e6eb66, #eebbd4, #b7dce2);
-
-  color: rgb(70, 67, 67);
-}
-
 .footer_txt {
   font-size: 20px;
-  background-image: linear-gradient(to right bottom, #e7f00e, #f8afd4, #7ed5e4);
   color: rgb(70, 67, 67);
+  background-color: #fafdfc;
 }
 
 .vega-bind-name {
   padding-left: 300px;
 }
 
-#lifeColour {
-  color: #dd3497;
-}
-
-.highLifeColour {
-  color: #ae017e;
-}
-
-.lowLifeColour {
-  color: #be7e8e;
-}
-
 .corrColour {
   color: #14c4bb;
-}
-
-#avgHappyColour {
-  color: #c0800a;
-}
-
-.happyCorr {
-  color: rgb(170, 159, 0);
 }

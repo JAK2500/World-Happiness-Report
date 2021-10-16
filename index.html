@@ -29,50 +29,42 @@
   </head>
 
   <body onload="loadVis()">
-    <!-- Cover photo of WHR -->
-    <div>
-      <img
-        src="WHR_2021_cover.jpg"
-        class="img-fluid w-100"
-        alt="Cover of World Happiness Report"
-        id="cover"
-      />
-    </div>
+    <div class="white_space"></div>
+
+    <h1 class="text-center fw-bold" id="WHR_title">
+      The World Happiness Report
+    </h1>
 
     <div class="container">
-      <div class="white_space"></div>
-
       <!-- Trend of happiness by region 2006-2020 -->
       <div class="my-5">
         <h1 class="h1 text-center">
           Average Trend of Happiness by Region from 2006 to 2020
         </h1>
         <div class="my-4"></div>
-        <div class="my-2 fs-5">
-          <div class="textBackground text-center">
-            Throughout the years,
+        <div class="mt-2 fs-5">
+          <div class="text-center">
             <span class="fw-bold fs-4" id="NorthAmerica"
               >North America & ANZ(Australia and New Zealand)</span
             >
             and
-            <span class="fw-bold fs-4" id="WestEu">Western Europe</span>
-            have been consistently the
-            <span class="fw-bold fs-3 happyColour fst-italic"
-              >top 2 happiest regions</span
-            >
+            <span class="fw-bold fs-4" id="WestEu">Western Europe</span> <br />
+            have been consistently the 2 regions with the
+            <span class="fw-bold fs-3 fst-italic">highest</span> average
+            happiness score
             <span class="emoji">&#128518;</span>
             <br />
-            While
+            on the other hand,
+            <br />
             <span class="fw-bold fs-4" id="SubAfr">Sub-Saharan Africa </span>
             and <span class="fw-bold fs-4" id="SouthAsia">South Asia</span> have
-            been the
-            <span class="fw-bold fs-3 sadColour fst-italic">
-              least happiest regions</span
-            >
+            been the 2 regions with the <br />
+            <span class="fw-bold fs-3 fst-italic">lowest</span> average
+            happiness score
             <span class="emoji">&#128577;</span>
           </div>
         </div>
-        <p class="mt-5"></p>
+        <p class="mt-4"></p>
         <div>
           <div id="happiness_by_region"></div>
         </div>
@@ -132,45 +124,39 @@
       <!-- Happiness by region 2021 -->
       <div class="row my-4" id="happinessByRegion2021">
         <h1 class="h1 text-center">Average Happiness by Region in 2021</h1>
-        <p class="param_space"></p>
-        <div class="col-3 fs-5" id="avgHappy">
-          <div class="textBackground">
+
+        <div class="fs-5 text-center">
+          <div>
             The Worldwide Average Happiness
             <span class="emoji">&#128578;</span> for the year 2021 was
-            <span class="fw-bold fs-2" id="avgHappyColour"> 5.53 </span>
+            <span class="fw-bold fs-2"> 5.53 </span>
           </div>
         </div>
-        <div class="col-9">
+        <div class="mt-2" id="bar_chart_2021">
           <div id="bar_chart"></div>
         </div>
       </div>
-
-      <div class="white_space"></div>
 
       <!-- GDP Per Capita by region 2021 -->
       <div class="row my-4" id="GDPByRegion2021">
         <h1 class="h1 text-center">Average GDP Per Capita by Region in 2021</h1>
         <p class="param_space"></p>
-        <div class="text-center fs-5">
-          <div class="textBackground">
+        <div class="fs-5" id="gdp_text_2021">
+          <div>
             <span class="fw-bold fs-4" id="NorthAmerica"
               >North America & ANZ</span
             >
             and
             <span class="fw-bold fs-4" id="WestEu">Western Europe</span>
-            were the 2 regions with the
-            <span class="fw-bold fs-3 happyColour fst-italic"
-              >highest average income</span
-            >
+            had the
+            <span class="fw-bold fs-3 fst-italic">highest</span> average income
             <span class="emoji">&#129297;</span>
             <br />
             While
             <span class="fw-bold fs-4" id="SubAfr">Sub-Saharan Africa </span>
             and <span class="fw-bold fs-4" id="SouthAsia">South Asia</span> had
-            the
-            <span class="fw-bold fs-3 sadColour fst-italic"
-              >lowest average income
-            </span>
+            the <span class="fw-bold fs-3 fst-italic">lowest </span>average
+            income
             <span class="emoji">&#128543;</span>
           </div>
         </div>
@@ -225,23 +211,13 @@
         <p class="param_space"></p>
 
         <div class="fs-5 text-center">
-          <div class="textBackground">
-            <span class="fs-3 fw-bold happyColour">Finland </span> was the
-            country with the
-            <span class="happyColour fs-4 fst-italic fw-bold">
-              highest happiness score
-            </span>
-            <span class="happyColour fs-2 fw-bold fst-italic">(7.84)</span>
-            <span class="emoji">&#128522;</span>
-            <br />
-            &
-            <br />
-            <span class="fs-3 fw-bold sadColour">Afghanistan </span>
-            was the country with the
-            <span class="sadColour fs-4 fst-italic fw-bold"
-              >lowest happiness score</span
-            >
-            <span class="sadColour fs-2 fw-bold fst-italic">(2.52)</span>
+          <div>
+            The <span class="fs-4 fst-italic fw-bold"> happiest </span> country
+            was <span class="fs-3 fw-bold">Finland </span>
+
+            <span class="emoji">&#128522;</span> and the
+            <span class="fs-4 fst-italic fw-bold">saddest</span> country was
+            <span class="fs-3 fw-bold">Afghanistan </span>
             <span class="emoji">&#128546;</span>
           </div>
         </div>
@@ -255,12 +231,31 @@
         </div>
       </div>
 
-      <!-- Top & Bottom 25 countries for happiness in 2021 -->
-      <div class="row my-4" id="top_bottom_k2021">
+      <!-- Top & Bottom 15 countries for happiness in 2021 -->
+
+      <div class="row my-3" id="top_bottom_k2021">
         <div>
-          <h1 class="h1 text-center">Top & Bottom K Countries in Happiness</h1>
+          <h1 class="h1 text-center">
+            The 15 Countries With The Highest & Lowest Happiness Score
+          </h1>
           <p class="param_space"></p>
-          <div id="most_and_least_happy"></div>
+          <div class="text-center fs-5">
+            <span class="fw-bold" id="WestEu">Western Europe</span> had the
+            <span class="fw-bold">MOST</span>
+            number of countries featuring amongst the 15 countries with the
+            <span class="fw-bold fst-italic">highest</span> happiness score
+            <br />
+            on the other hand, <br />
+
+            <span class="fw-bold" id="SubAfr">Sub-Saharan Africa</span> had the
+            <span class="fw-bold">MOST</span>
+            number of countries featuring amongst the 15 countries with the
+            <span class="fw-bold fst-italic">lowest</span> happiness score
+          </div>
+          <div class="param_space"></div>
+          <div class="mt-4">
+            <div id="most_and_least_happy"></div>
+          </div>
         </div>
       </div>
 
@@ -269,43 +264,32 @@
         <h1 class="h1 text-center">
           Average Life Expectancy by Country in 2021
         </h1>
+
         <p class="param_space"></p>
+
         <div class="fs-5 text-center">
-          <div class="textBackground">
+          <div>
             <span class="fw-bold fs-3" id="WestEu">Western Europe</span> was the
-            region with the
-            <span class="fs-4 highLifeColour fw-bold">
-              highest average Life Expectancy</span
-            >
-            <span class="highLifeColour fs-3 fw-bold">(73 years old)</span>
+            region with the <span class="fs-4 fw-bold"> highest</span> average
+            Life Expectancy
+            <span class="fs-3 fw-bold">(73 years old)</span>
             <br />
             & <br />
             <span class="fw-bold fs-3" id="SubAfr">Sub-Saharan Africa </span>
             was the region with the
-            <span class="lowLifeColour fs-4 fst-italic fw-bold">
-              lowest average Life Expectancy
-            </span>
-            <span class="lowLifeColour fs-3 fst-italic fw-bold"
-              >(56 years old)</span
-            >
+            <span class="fs-4 fst-italic fw-bold"> lowest </span>average Life
+            Expectancy
+            <span class="fs-3 fst-italic fw-bold">(56 years old)</span>
           </div>
         </div>
-        <p class="param_space"></p>
-        <div class="col my-4">
+
+        <div class="my-4">
           <div id="life_map"></div>
           <figure>
             <figcaption class="blockquote-footer my-1">
               Countries with no data are shown in grey
             </figcaption>
           </figure>
-        </div>
-        <div class="col fs-3 text-center" id="lifeExpec">
-          <div class="textBackground">
-            The average Life Expectancy for 2021 was <br />
-            <span class="fw-bold fs-2 fst-italic" id="lifeColour"
-              >65 Years Old</span
-            >
-          </div>
         </div>
       </div>
 
@@ -376,7 +360,11 @@
       <!-- correlation b/w Happiness & Health -->
       <div class="row my-4" id="HappinessAndHealth">
         <h2 class="h2 text-center">
-          Is The Saying "Happiness Is The Highest Form Of Health" True?
+          Is The Saying
+          <span class="fst-italic"
+            >"Happiness Is The Highest Form Of Health"</span
+          >
+          True?
         </h2>
         <figure>
           <figcaption class="blockquote-footer my-2 text-center">
@@ -384,7 +372,7 @@
           </figcaption>
         </figure>
         <div class="col fs-5" id="happy_health">
-          <div class="textBackground">
+          <div>
             There's a
             <span class="fw-bolder fs-4 corrColour">
               high correlation (0.77)</span
@@ -405,9 +393,18 @@
         <h2 class="h2 text-center">
           Is There Any Association Between Social Support & Happiness?
         </h2>
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <p class="fst-italic">
+              “As one person I cannot change the world, but I can change the
+              world of one person.”
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">Paul Shane Spear</figcaption>
+        </figure>
 
         <div class="col fs-5" id="happy_support">
-          <div class="textBackground">
+          <div>
             There's a
             <span class="fw-bolder fs-4 corrColour">
               high correlation (0.76)</span
@@ -430,8 +427,17 @@
           Does Being Free Contribute To Our Happiness?
         </h2>
 
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <p class="fst-italic">
+              “True success, true happiness lies in freedom and fulfillment.”
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer">Dada Vaswani</figcaption>
+        </figure>
+
         <div class="col fs-5" id="happy_free">
-          <div class="textBackground">
+          <div>
             The correlation between Happiness & Freedom is
             <span class="fw-bolder fs-4 corrColour"> quite high (0.61)</span>
 
@@ -453,13 +459,11 @@
               "Money can't buy happiness. But it sure can rent it for a while."
             </p>
           </blockquote>
-          <figcaption class="blockquote-footer fst-italic">
-            Kim Gruenenfelder
-          </figcaption>
+          <figcaption class="blockquote-footer">Kim Gruenenfelder</figcaption>
         </figure>
 
         <div class="col my-3 fs-5">
-          <div class="textBackground my-4">
+          <div class="my-4">
             With such
             <span class="fw-bolder fs-4 corrColour">
               high correlation (0.79)</span
@@ -473,13 +477,9 @@
             >and
             <span class="fw-bold fs-4" id="WestEu">Western Europe</span>
             which are the 2 regions with the
-            <span class="happyCorr fw-bold fst-italic"
-              >highest average income</span
-            >
-            also had the
-            <span class="happyCorr fw-bold fst-italic"
-              >highest average happiness</span
-            >
+            <span class="fw-bold fst-italic">highest</span> average income, have
+            the <span class="fw-bold fst-italic">highest</span> average
+            happiness
             <span class="emoji">&#128516;</span>
 
             <p class="param_space"></p>
@@ -488,12 +488,8 @@
             <span class="fw-bold fs-4" id="SubAfr">Sub-Saharan Africa</span> and
             <span class="fw-bold fs-4" id="SouthAsia">South Asia </span>which
             are the 2 regions with the
-            <span class="sadColour fw-bold fst-italic">
-              lowest average income</span
-            >, had the
-            <span class="sadColour fw-bold fst-italic"
-              >lowest average happiness</span
-            >
+            <span class="fw-bold fst-italic"> lowest </span>average income, have
+            the <span class="fw-bold fst-italic">lowest</span> average happiness
             <span class="emoji">&#128546;</span>
           </div>
         </div>
@@ -519,11 +515,12 @@
                 id="money_health_img"
                 alt="Does money makes us healthier"
               />
+
               <br />
               <br />
 
               <div class="my-3 fs-5">
-                <div class="textBackground">
+                <div>
                   The correlation between Life Expectancy & Money is
                   <span class="fw-bolder fs-4 corrColour">
                     very high (0.86)</span

@@ -11,7 +11,7 @@
         "stroke": "transparent"
       }
     },
-    "background": "#f0dfec",
+    "background": "#fafdfc",
     "legend": { "labelFontSize": 12, "labelLimit": 300 }
   },
   "selection": {

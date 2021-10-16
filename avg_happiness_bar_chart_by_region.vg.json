@@ -10,7 +10,6 @@
         "stroke": "transparent"
       }
     },
-    "background": "#e5d2e7",
     "legend": { "disable": true }
   },
   "height": { "step": 30 },
